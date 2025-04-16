@@ -100,7 +100,7 @@ Breeze](https://github.com/laravel/breeze), que usa MySQL.
 a. Utilize um multi-stage build para otimizar uma aplicação Go,
 reduzindo o tamanho da imagem final.
 
-b. Exemplo de aplicação: Compile e rode a API do [Go Fiber Example](https://github.com/gofiber/recipes/tree/main/docker-multistage-build)
+b. Exemplo de aplicação: Compile e rode a API do [Go Fiber Example](https://github.com/gofiber/recipes)
 dentro do container.
 
 ---
@@ -112,7 +112,7 @@ dentro do container.
 a. Crie uma rede Docker personalizada e faça dois containers, um
 Node.js e um MongoDB, se comunicarem.
 
-b. Exemplo de aplicação: Utilize o projeto [MEAN Todos](https://github.com/luanphandinh/mean-todo) para criar um
+b. Exemplo de aplicação: Utilize o projeto [MEAN Todos](https://github.com/drmikeh/mean-todos) para criar um
 app de tarefas usando Node.js + MongoDB.
 
 ---
@@ -124,7 +124,7 @@ app de tarefas usando Node.js + MongoDB.
 a. Utilize Docker Compose para configurar uma aplicação Django com
 um banco de dados PostgreSQL.
 
-b. Exemplo de aplicação: Use o projeto [Django Polls](https://github.com/databases-io/django-polls) App para criar
+b. Exemplo de aplicação: Use o projeto [Django Polls](https://github.com/ahmeddelattarr/PollsApp_django) App para criar
 uma pesquisa de opinião integrada ao banco.
 
 ---
