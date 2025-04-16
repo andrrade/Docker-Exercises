@@ -18,8 +18,8 @@
 
 - [5º Exercício](#5%EF%B8%8F⃣-criando-e-utilizando-volumes-para-persistência-de-dados-)
 - [6º Exercício](#6%EF%B8%8F⃣-criando-e-rodando-um-container-multi-stage-)
-- [7º Exercício](#7%EF%B8%8F⃣--construindo-uma-rede-docker-para-comunicação-entre-containers-)
-- [8º Exercício](#8%EF%B8%8F⃣--criando-um-compose-file-para-rodar-uma-aplicação-com-banco-de-dados-)
+- [7º Exercício](#7%EF%B8%8F⃣-construindo-uma-rede-docker-para-comunicação-entre-containers-)
+- [8º Exercício](#8%EF%B8%8F⃣-criando-um-compose-file-para-rodar-uma-aplicação-com-banco-de-dados-)
 
 ## 🔴 Difícil
 
