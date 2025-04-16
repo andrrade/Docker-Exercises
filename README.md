@@ -113,7 +113,7 @@ app de tarefas usando Node.js + MongoDB.
 
 ---
 
-## 8️⃣ Criando um compose file para rodar uma aplicação com banco de dados 🟡
+## 8️⃣ Criando um compose file para rodar uma aplicação com BD 🟡
 
 [🔼 Voltar ao Sumário](#sumário-)
 
