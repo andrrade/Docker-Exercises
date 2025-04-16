@@ -3,7 +3,7 @@
 </p>
 <br>
 
-# Exercícios de Docker 🐋
+# Avaliação 2 - Lista de Exercícios 🐋
 
 # Sumário 📝
 
