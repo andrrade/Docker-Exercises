@@ -27,6 +27,8 @@
 
 ---
 
+# 🟢 Fácil
+
 ## 1️⃣ Rodando um container básico 🟢
 
 [🔼 Voltar ao Sumário](#sumário-)
@@ -72,6 +74,8 @@ b. Exemplo de aplicação: Use a API de exemplo [Flask Restful API
 Starter](https://github.com/gothinkster/flask-realworld-example-app) para criar um endpoint de teste.
 
 ---
+
+# 🟡 Médio
 
 ## 5️⃣ Criando e utilizando volumes para persistência de dados 🟡
 
@@ -120,6 +124,8 @@ b. Exemplo de aplicação: Use o projeto [Django Polls](https://github.com/datab
 uma pesquisa de opinião integrada ao banco.
 
 ---
+
+# 🔴 Difícil
 
 ## 9️⃣ Criando uma imagem personalizada com um servidor web e arquivos estáticos 🔴
 
