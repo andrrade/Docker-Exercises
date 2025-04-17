@@ -31,6 +31,35 @@
 
 ---
 
+## 👣 1º Passo: Configuração do Ambiente
+
+Para realizar os exercícios de Docker, utilizei as seguintes ferramentas e configurações:
+
+- 🪟 **Sistema Operacional:** Windows  
+- 🐧 **WSL:** [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/) com [Ubuntu 25.04.1 LTS](https://documentation.ubuntu.com/server/)  
+- 🐳 **Gerenciador de Containers:** [Rancher Desktop](https://rancherdesktop.io/) — alternativa gratuita ao [Docker Desktop](https://www.docker.com/products/docker-desktop/)  
+- 💻 **Editor de Código:** [Visual Studio Code](https://code.visualstudio.com/)  
+
+## 👣 2º Passo: Organização dos Exercícios no WSL
+
+Para manter os exercícios organizados, dentro do diretório home do WSL, criei uma pasta chamada `docker-exercises`. Cada exercício foi armazenado em um subdiretório separado, como `exe01`, `exe02`, etc.
+
+![image01](https://github.com/user-attachments/assets/b3206469-6561-4215-b2a3-f178a68c7cce)
+
+Comandos Utilizados:
+
+```bash
+mkdir docker-exercises
+```
+
+```bash
+cd docker-exercises
+```
+
+```bash
+mkdir exe-01
+```
+
 # 🟢 Fácil
 
 ## 1️⃣ Rodando um container básico 🟢
@@ -41,6 +70,24 @@ a. Execute um container usando a imagem do Nginx e acesse a página
 padrão no navegador.
 
 b. Exemplo de aplicação: Use a [landing page do TailwindCSS](https://github.com/tailwindtoolbox/Landing-Page) como site estático dentro do container.
+
+## 💡 Resolução Exercício 1
+
+1. Criar o diretório `exe01` e acessá-lo:
+   
+![image02](https://github.com/user-attachments/assets/b16ef3c2-1ca0-487e-bf01-5ae3286e1c25)
+
+Comandos Utilizados:
+
+```bash
+mkdir exe01
+```
+
+```bash
+cd exe01
+```
+
+2.
 
 ---
 
