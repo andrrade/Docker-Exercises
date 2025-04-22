@@ -66,10 +66,9 @@ mkdir exe-01
 
 [🔼 Voltar ao Sumário](#sumário-)
 
-a. Execute um container usando a imagem do Nginx e acesse a página
-padrão no navegador.
-
-b. Exemplo de aplicação: Use a [landing page do TailwindCSS](https://github.com/tailwindtoolbox/Landing-Page) como site estático dentro do container.
+Execute um container usando a imagem do Nginx e acesse a página padrão no 
+navegador. Use a [landing page do TailwindCSS](https://github.com/tailwindtoolbox/Landing-Page) como site estático dentro do 
+container.
 
 ## 💡 Resolução Exercício 1
 
@@ -142,12 +141,10 @@ docker run -d -p 8080:80 --name container-tailwind site-tailwind
 
 [🔼 Voltar ao Sumário](#sumário-)
 
-a. Inicie um container Ubuntu e interaja com o terminal dele.
+Inicie um container Ubuntu e interaja com o terminal dele. Teste um script Bash que 
+imprime logs do sistema ou instala pacotes de forma interativa.
 
-b. Exemplo de aplicação: Teste um script Bash que imprime logs do
-sistema ou instala pacotes de forma interativa.
-
-## 💡 Resolução Exercício 1
+## 💡 Resolução Exercício 2
 
 01. t
    
@@ -207,11 +204,10 @@ docker run -it ubuntu-logs
 
 [🔼 Voltar ao Sumário](#sumário-)
 
-a. Liste todos os containers em execução e parados, pare um container
-em execução e remova um container específico.
+Liste todos os containers em execução e parados, pare um container em execução e 
+remova um container específico.
 
-b. Exemplo de aplicação: Gerenciar containers de testes criados para
-verificar configurações ou dependências.
+## 💡 Resolução Exercício 3
 
 ![image](https://github.com/user-attachments/assets/d97a3b14-aa2a-43c4-a941-d1794c563086)
 
@@ -237,11 +233,10 @@ docker rm ID
 
 [🔼 Voltar ao Sumário](#sumário-)
 
-a. Crie um Dockerfile para uma aplicação Flask que retorna uma
-mensagem ao acessar um endpoint.
+Crie um Dockerfile para uma aplicação Flask que retorna uma mensagem ao acessar 
+um endpoint, para isso utilize o projeto [Docker Flask](https://awesome-compose/flask/app%20at%20master%20%C2%B7%20docker/awesome-compose)
 
-b. Exemplo de aplicação: Use a API de exemplo [Flask Restful API
-Starter](https://github.com/gothinkster/flask-realworld-example-app) para criar um endpoint de teste.
+## 💡 Resolução Exercício 4
 
 ---
 
@@ -251,11 +246,10 @@ Starter](https://github.com/gothinkster/flask-realworld-example-app) para criar 
 
 [🔼 Voltar ao Sumário](#sumário-)
 
-a. Execute um container MySQL e configure um volume para armazenar
-os dados do banco de forma persistente.
+Execute um container MySQL e configure um volume para armazenar os dados do 
+banco de forma persistente. Para aplicar esse conceito você pode utilizar o [react-express-mysql](https://github.com/docker/awesome-compose/tree/master/react-express-mysql)
 
-b. Exemplo de aplicação: Use o sistema de login e cadastro do [Laravel
-Breeze](https://github.com/laravel/breeze), que usa MySQL.
+## 💡 Resolução Exercício 5
 
 ---
 
@@ -263,11 +257,10 @@ Breeze](https://github.com/laravel/breeze), que usa MySQL.
 
 [🔼 Voltar ao Sumário](#sumário-)
 
-a. Utilize um multi-stage build para otimizar uma aplicação Go,
-reduzindo o tamanho da imagem final.
+Utilize um multi-stage build para otimizar uma aplicação Go, reduzindo o tamanho 
+da imagem final. Utilize para praticar o projeto [GS PING](https://github.com/docker/docker-gs-ping) desenvolvido em Golang.
 
-b. Exemplo de aplicação: Compile e rode a API do [Go Fiber Example](https://github.com/gofiber/recipes)
-dentro do container.
+## 💡 Resolução Exercício 6
 
 ---
 
@@ -275,11 +268,10 @@ dentro do container.
 
 [🔼 Voltar ao Sumário](#sumário-)
 
-a. Crie uma rede Docker personalizada e faça dois containers, um
-Node.js e um MongoDB, se comunicarem.
+Crie uma rede Docker personalizada e faça dois containers, um Node.js e um 
+MongoDB, se comunicarem, sugestão, utilize o projeto [React Express + Mongo](https://github.com/docker/awesome-compose/tree/master/react-express-mongodb).
 
-b. Exemplo de aplicação: Utilize o projeto [MEAN Todos](https://github.com/drmikeh/mean-todos) para criar um
-app de tarefas usando Node.js + MongoDB.
+## 💡 Resolução Exercício 7
 
 ---
 
@@ -287,11 +279,10 @@ app de tarefas usando Node.js + MongoDB.
 
 [🔼 Voltar ao Sumário](#sumário-)
 
-a. Utilize Docker Compose para configurar uma aplicação Django com
-um banco de dados PostgreSQL.
+Utilize Docker Compose para configurar uma aplicação com um banco de 
+dados PostgreSQL, use para isso o projeto [pgadmin](https://github.com/docker/awesome-compose/tree/master/postgresql-pgadmin).
 
-b. Exemplo de aplicação: Use o projeto [Django Polls](https://github.com/ahmeddelattarr/PollsApp_django) App para criar
-uma pesquisa de opinião integrada ao banco.
+## 💡 Resolução Exercício 8
 
 ---
 
@@ -301,11 +292,67 @@ uma pesquisa de opinião integrada ao banco.
 
 [🔼 Voltar ao Sumário](#sumário-)
 
-a. Construa uma imagem baseada no Nginx ou Apache, adicionando um
-site HTML/CSS estático.
+Construa uma imagem baseada no Nginx ou Apache, adicionando um site 
+HTML/CSS estático. Utilize a [landing page do Creative Tim](https://github.com/creativetimofficial/material-kit) para criar uma página 
+moderna hospedada no container.
 
-b. Exemplo de aplicação: Utilize a [landing page do Creative Tim](https://github.com/creativetimofficial/material-kit) para
-criar uma página moderna hospedada no container
+## 💡 Resolução Exercício 9
+
+## 1️⃣0️⃣ Evitar execução como root 🔴
+
+[🔼 Voltar ao Sumário](#sumário-)
+
+Ao rodar containers com o usuário root, você expõe seu sistema a riscos maiores em 
+caso de comprometimento. Neste exercício, você deverá criar um Dockerfile para 
+uma aplicação simples (como um script Python ou um servidor Node.js) e configurar 
+a imagem para rodar com um usuário não-root.
+Você precisará:
+a. Criar um usuário com useradd ou adduser no Dockerfile.
+b. Definir esse usuário como o padrão com a instrução USER.
+c. Construir a imagem e iniciar o container.
+d. Verificar se o processo está rodando com o novo usuário usando docker exec 
+<container> whoami.
+
+---
+
+## 💡 Resolução Exercício 10
+
+## 1️⃣1️⃣ Analisar imagem Docker com Trivy 🔴
+
+[🔼 Voltar ao Sumário](#sumário-)
+
+Trivy é uma ferramenta open source para análise de vulnerabilidades em imagens 
+Docker. Neste exercício, você irá analisar uma imagem pública, como python:3.9 ou 
+node:16, em busca de vulnerabilidades conhecidas.
+Você deverá:
+a. Instalar o Trivy na sua máquina (via script ou pacote).
+b. Rodar trivy image <nome-da-imagem> para analisar.
+c. Identificar vulnerabilidades com severidade HIGH ou CRITICAL.
+d. Anotar os pacotes ou bibliotecas afetadas e sugerir possíveis ações (como 
+atualização da imagem base ou substituição de dependências).
+
+---
+
+## 💡 Resolução Exercício 11
+
+## 1️⃣2️⃣ Corrigir vulnerabilidades encontradas 🔴
+
+[🔼 Voltar ao Sumário](#sumário-)
+
+Após identificar vulnerabilidades com ferramentas como o Trivy, o próximo passo é 
+corrigi-las. Imagens grandes e genéricas frequentemente trazem bibliotecas 
+desnecessárias e vulneráveis, além de usarem o usuário root por padrão. Neste 
+exercício, você irá trabalhar com um exemplo de Dockerfile com más práticas e 
+aplicar melhorias para construir uma imagem mais segura e enxuta. Identifique as 
+melhorias e gere uma nova versão de Dockerfile.
+
+![image](https://github.com/user-attachments/assets/635092a9-dbf1-4b8e-9da7-2b092801f2d2)
+
+---
+
+## 💡 Resolução Exercício 12
+
+--- 
 
 <p align="center">
   <br>
