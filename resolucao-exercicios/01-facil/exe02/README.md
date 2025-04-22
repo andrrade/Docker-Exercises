@@ -7,13 +7,30 @@ imprime logs do sistema ou instala pacotes de forma interativa.
 
 ## 💡 Resolução Exercício 2
 
-01. t
-   
-![image09](https://github.com/user-attachments/assets/86b79d7a-1f6a-4e83-ba56-8c03847cef45)
+01. Crie uma pasta para realizar o exercício 2
 
-2. `code .`
+```bash
+mkdir exe02
+```
 
-3. t
+02. Entre nela
+
+```bash
+cd exe02/
+```
+
+03. Abra o VSCode
+
+```bash
+code .
+```
+
+![image](https://github.com/user-attachments/assets/c3546bb1-7e3b-4065-be46-180815e3849e)
+
+
+04. Crie o arquivo `logs.sh`
+
+![image](https://github.com/user-attachments/assets/19845e52-3425-473b-9c5b-adf953db6584)
 
 ```shell
 #!/bin/bash
@@ -26,18 +43,28 @@ apt update && apt upgrade -y
 echo ""
 
 echo -e "${PURPLE}=== Logs do Sistema ===${DEFAULT}"
-echo "Data e Hora: $(date)"
+echo "Data e Hora (Brasil): $(date '+%d/%m/%Y %H:%M:%S')"
 echo ""
 
 bash
 ```
 
-![image](https://github.com/user-attachments/assets/fb13c0d4-29c9-4d90-a538-44cd7539c85a)
+05. Crie o arquivo `Dockerfile`
 
-4.  t
+[Imagem Ubuntu](https://hub.docker.com/layers/library/ubuntu/25.04/images/sha256-9a302811bba2ae9533ddae0b563af29c112f1262329e508f13c0c532d5ba7c19)
+
+![image](https://github.com/user-attachments/assets/9f1e590c-f2dc-4308-86c9-1528c5a549c1)
 
 ```Dockerfile
-FROM ubuntu:latest
+FROM ubuntu:25.04
+
+ENV TZ="America/Sao_Paulo"
+
+RUN apt-get update
+
+RUN apt-get install -y tzdata
+
+RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 COPY logs.sh /logs.sh
 RUN chmod +x /logs.sh
@@ -45,16 +72,18 @@ RUN chmod +x /logs.sh
 CMD ["/logs.sh"]
 ```
 
-![image](https://github.com/user-attachments/assets/e1c9c7fe-a872-4911-a71c-7980531afb71)
+06. Crie o container
 
 ```bash
-docker build -t ubuntu-logs .
+docker build -t exe02 .
 ```
+
+07. Rode ele
 
 ```bash
-docker run -it ubuntu-logs
+docker run -it exe02
 ```
 
-![image](https://github.com/user-attachments/assets/c91762fb-019a-4c40-a67f-82e01d116690)
+![image](https://github.com/user-attachments/assets/ce57f0d2-6918-4de7-946e-37c318d61410)
 
-![image](https://github.com/user-attachments/assets/a3591bdd-70e5-4681-96b3-8fe490688f53)
+08. Extra: Mostrei com `ls` que os comandos estão sendo realizados no terminal do container Ubuntu, para sair, basta digitar `exit`
