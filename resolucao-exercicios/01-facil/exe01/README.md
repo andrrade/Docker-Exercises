@@ -8,7 +8,7 @@ container.
 
 ## 💡 Resolução Exercício 1
 
-01. Criar o diretório `exe01` e acessá-lo:
+01. Crie o diretório `exe01` e acesse-o:
    
 ![image02](https://github.com/user-attachments/assets/b16ef3c2-1ca0-487e-bf01-5ae3286e1c25)
 
@@ -22,51 +22,64 @@ mkdir exe01
 cd exe01
 ```
 
-02. Clonar o repositório que contém a [Landing-Page](https://github.com/tailwindtoolbox/Landing-Page)
+02. Clone o repositório que contém a [Landing-Page](https://github.com/tailwindtoolbox/Landing-Page)
 
 ![image03](https://github.com/user-attachments/assets/4fe22256-b6aa-443b-a2c3-ded601716844)
 
 03. No final do link adicione um ponto `.` para copiar para o diretório atual:
 
 ```bash
-https://github.com/tailwindtoolbox/Landing-Page.git .
+git clone https://github.com/tailwindtoolbox/Landing-Page.git .
 ```
 
-04. Remover os arquivos `README.md` e `LICENSE`
-  
-05. Abrir o VSCode com `code .` para criar o `Dockerfile`
-
-![image04](https://github.com/user-attachments/assets/9805d84b-8066-4814-a1ad-42f3b085b21d)
-
-06. Criar um arquivo Dockerfile
-
-![image05](https://github.com/user-attachments/assets/dfcce0c1-f7e2-4293-9384-6839fa2111e0)
+04. Remova os arquivos `README.md` e `LICENSE`
 
 ```bash
-FROM nginx:latest
+rm -f LICENSE README.md
+```
+
+05. Abra o VSCode com `code .` para criar o `Dockerfile`
+
+```bash
+code .
+```
+![image](https://github.com/user-attachments/assets/e306f9f6-c684-470c-a4ce-7f03586fdd8a)
+
+06. Crie um arquivo Dockerfile
+
+[Imagem Nginx](https://hub.docker.com/layers/library/nginx/stable-alpine/images/sha256-6566fca4271325b15a944d32e0bbdfab5fba0447713689d5a610d2c8077d3c9f)
+
+![image](https://github.com/user-attachments/assets/e12c9ea6-8072-4029-abdd-ed17fb07ab23)
+
+```bash
+FROM nginx:stable-alpine
 COPY . /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
-
-07. Voltando para o terminal veja se o Dockerfile criado está lá
   
-08. Crie o container:
+07. Crie o container:
 
 ```bash
-docker build -t site-tailwind .
+docker build -t exe01 .
 ```
 
-![image06](https://github.com/user-attachments/assets/e3d9596d-2067-46b9-970a-31fb6dd0d1ff)
-
-09. Rode o container
+08. Rode o container
 
 ```bash
-docker run -d -p 8080:80 --name container-tailwind site-tailwind
+docker run -d -p 8080:80 --name container-exe01 exe01
 ```
 
-![image07](https://github.com/user-attachments/assets/c142e684-d1e7-434c-b9c7-8ee2c4aff2d6)
+![image](https://github.com/user-attachments/assets/ddb83720-d96a-4c10-84a1-712e41d986ed)
 
-10. Acesse o navegador e digite `http://localhost:8080`
+09. Acesse o navegador e digite:
+
+```bash
+http://localhost:8080
+```
 
 ![image08](https://github.com/user-attachments/assets/2147565e-4ad2-4629-9780-ed38d11d1c21)
+
+10. Extra: Prova de que o container estava rodando:
+
+![image](https://github.com/user-attachments/assets/77297953-f4ad-494d-9adb-575d48ee8fee)
