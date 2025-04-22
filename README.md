@@ -42,23 +42,28 @@ mkdir exe-01
 
 # Sumário 📝
 
+- [PDF dos Exercícios](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/ExerciciosDocker2025.pdf)
+
 ## 🟢 Fácil
 
-- [1º Exercício](#1%EF%B8%8F⃣-rodando-um-container-básico-)
-- [2º Exercício](#2%EF%B8%8F⃣-criando-e-rodando-um-container-interativo-)
-- [3º Exercício](#3%EF%B8%8F⃣-listando-e-removendo-containers-)
-- [4º Exercício](#4%EF%B8%8F⃣-criando-um-dockerfile-para-uma-aplicação-simples-em-python-)
+- [1º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/01-facil/exe01/README.md)
+- [2º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/01-facil/exe02/README.md)
+- [3º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/01-facil/exe03/REAMDE.md)
+- [4º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/01-facil/exe04/README.md-)
 
 ## 🟡 Médio
 
-- [5º Exercício](#5%EF%B8%8F⃣-criando-e-utilizando-volumes-para-persistência-de-dados-)
-- [6º Exercício](#6%EF%B8%8F⃣-criando-e-rodando-um-container-multi-stage-)
-- [7º Exercício](#7%EF%B8%8F⃣-construindo-uma-rede-docker-para-comunicação-entre-containers-)
-- [8º Exercício](#8%EF%B8%8F⃣-criando-um-compose-file-para-rodar-uma-aplicação-com-bd-)
+- [5º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/02-medio/exe05/README.md)
+- [6º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/02-medio/exe06/README.md)
+- [7º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/02-medio/exe07/README.md)
+- [8º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/02-medio/exe08/README.md)
 
 ## 🔴 Difícil
 
-- [9º Exercício](#9%EF%B8%8F⃣-criando-uma-imagem-personalizada-com-um-servidor-web-e-arquivos-estáticos-)
+- [9º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/03-dificil/exe09/README.md)
+- [10º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/03-dificil/exe10/README.md)
+- [11º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/03-dificil/exe11/README.md)
+- [12º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/03-dificil/exe12/README.md)
 
 ---
 
