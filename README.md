@@ -9,28 +9,6 @@
 
 # Avaliação 2 - Lista de Exercícios 🐋
 
-# Sumário 📝
-
-## 🟢 Fácil
-
-- [1º Exercício](#1%EF%B8%8F⃣-rodando-um-container-básico-)
-- [2º Exercício](#2%EF%B8%8F⃣-criando-e-rodando-um-container-interativo-)
-- [3º Exercício](#3%EF%B8%8F⃣-listando-e-removendo-containers-)
-- [4º Exercício](#4%EF%B8%8F⃣-criando-um-dockerfile-para-uma-aplicação-simples-em-python-)
-
-## 🟡 Médio
-
-- [5º Exercício](#5%EF%B8%8F⃣-criando-e-utilizando-volumes-para-persistência-de-dados-)
-- [6º Exercício](#6%EF%B8%8F⃣-criando-e-rodando-um-container-multi-stage-)
-- [7º Exercício](#7%EF%B8%8F⃣-construindo-uma-rede-docker-para-comunicação-entre-containers-)
-- [8º Exercício](#8%EF%B8%8F⃣-criando-um-compose-file-para-rodar-uma-aplicação-com-bd-)
-
-## 🔴 Difícil
-
-- [9º Exercício](#9%EF%B8%8F⃣-criando-uma-imagem-personalizada-com-um-servidor-web-e-arquivos-estáticos-)
-
----
-
 ## 👣 1º Passo: Configuração do Ambiente
 
 Para realizar os exercícios de Docker, utilizei as seguintes ferramentas e configurações:
@@ -59,6 +37,28 @@ cd docker-exercises
 ```bash
 mkdir exe-01
 ```
+
+---
+
+# Sumário 📝
+
+## 🟢 Fácil
+
+- [1º Exercício](#1%EF%B8%8F⃣-rodando-um-container-básico-)
+- [2º Exercício](#2%EF%B8%8F⃣-criando-e-rodando-um-container-interativo-)
+- [3º Exercício](#3%EF%B8%8F⃣-listando-e-removendo-containers-)
+- [4º Exercício](#4%EF%B8%8F⃣-criando-um-dockerfile-para-uma-aplicação-simples-em-python-)
+
+## 🟡 Médio
+
+- [5º Exercício](#5%EF%B8%8F⃣-criando-e-utilizando-volumes-para-persistência-de-dados-)
+- [6º Exercício](#6%EF%B8%8F⃣-criando-e-rodando-um-container-multi-stage-)
+- [7º Exercício](#7%EF%B8%8F⃣-construindo-uma-rede-docker-para-comunicação-entre-containers-)
+- [8º Exercício](#8%EF%B8%8F⃣-criando-um-compose-file-para-rodar-uma-aplicação-com-bd-)
+
+## 🔴 Difícil
+
+- [9º Exercício](#9%EF%B8%8F⃣-criando-uma-imagem-personalizada-com-um-servidor-web-e-arquivos-estáticos-)
 
 ---
 
