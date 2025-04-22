@@ -1,6 +1,6 @@
 ## 1️⃣0️⃣ Evitar execução como root 🔴
 
-[🔼 Voltar ao Sumário](#sumário-)
+[🔼 Voltar ao Sumário](https://github.com/andrrade/Docker-Exercises-CompassUOL?tab=readme-ov-file#sum%C3%A1rio-)
 
 Ao rodar containers com o usuário root, você expõe seu sistema a riscos maiores em 
 caso de comprometimento. Neste exercício, você deverá criar um Dockerfile para 

@@ -1,6 +1,6 @@
 ## 1️⃣ Rodando um container básico 🟢
 
-[🔼 Voltar ao Sumário](#sumário-)
+[🔼 Voltar ao Sumário](https://github.com/andrrade/Docker-Exercises-CompassUOL?tab=readme-ov-file#sum%C3%A1rio-)
 
 Execute um container usando a imagem do Nginx e acesse a página padrão no 
 navegador. Use a [landing page do TailwindCSS](https://github.com/tailwindtoolbox/Landing-Page) como site estático dentro do 

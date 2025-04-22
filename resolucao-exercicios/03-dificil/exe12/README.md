@@ -1,6 +1,6 @@
 ## 1️⃣2️⃣ Corrigir vulnerabilidades encontradas 🔴
 
-[🔼 Voltar ao Sumário](#sumário-)
+[🔼 Voltar ao Sumário](https://github.com/andrrade/Docker-Exercises-CompassUOL?tab=readme-ov-file#sum%C3%A1rio-)
 
 Após identificar vulnerabilidades com ferramentas como o Trivy, o próximo passo é 
 corrigi-las. Imagens grandes e genéricas frequentemente trazem bibliotecas 

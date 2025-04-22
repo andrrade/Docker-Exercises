@@ -1,6 +1,6 @@
 ## 3️⃣ Listando e removendo containers 🟢
 
-[🔼 Voltar ao Sumário](#sumário-)
+[🔼 Voltar ao Sumário](https://github.com/andrrade/Docker-Exercises-CompassUOL?tab=readme-ov-file#sum%C3%A1rio-)
 
 Liste todos os containers em execução e parados, pare um container em execução e 
 remova um container específico.

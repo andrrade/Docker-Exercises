@@ -1,6 +1,6 @@
 ## 2️⃣ Criando e rodando um container interativo 🟢
 
-[🔼 Voltar ao Sumário](#sumário-)
+[🔼 Voltar ao Sumário](https://github.com/andrrade/Docker-Exercises-CompassUOL?tab=readme-ov-file#sum%C3%A1rio-)
 
 Inicie um container Ubuntu e interaja com o terminal dele. Teste um script Bash que 
 imprime logs do sistema ou instala pacotes de forma interativa.
