@@ -50,26 +50,59 @@ rm -rf awesome-compose
 cd flask/app
 ```
 
-05. Subir o container
+05. Remover o arquivo `Dockerfile` para abrir o VSCode e criar um próprio
+> [!NOTE]
+> Senão não tem graça se já estivesse tudo pronto
 
-```bash
-docker-compose up -d
+![image](https://github.com/user-attachments/assets/bcbca674-d94e-4b52-92b4-b87700817b32)
+
+05. Arquivo Dockerfile
+
+![image](https://github.com/user-attachments/assets/28325dc9-db49-4e1f-acb2-15b802e18769)
+
+```dockerfile
+FROM python:3.10-alpine
+
+WORKDIR /app
+
+COPY requirements.txt /app
+
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip3 install -r requirements.txt
+
+COPY . /app
+
+EXPOSE 8000
+
+ENTRYPOINT ["python3"]
+CMD ["app.py"]
 ```
 
-![image](https://github.com/user-attachments/assets/e2dd9ab4-1d19-4854-98a2-2e7ac4b06e9e)
-
-06. Ver a porta que ele está rodando para acessar a aplicação
+06. Subir o container
 
 ```bash
-docker ps
+docker build -t exe04-image .
 ```
 
-![image](https://github.com/user-attachments/assets/b45a889f-a794-4bca-8e63-e18ee2b77f87)
+```bash
+docker run -d -p 8000:8000 --name exe04-container exe04-image
+```
+
+![image](https://github.com/user-attachments/assets/528ecc4e-09c2-423d-8705-2b1019ca86f9)
 
 07. Abrir no navegador
 
 ```bash
+curl http://localhost:8000 && echo
+```
+> [!NOTE]
+> Esse comando é para ser executado no terminal
+
+```bash
 http://localhost:8000
 ```
+
+> [!NOTE]
+> Esse é para copiar e colar no navegador
 
 ![image](https://github.com/user-attachments/assets/9253f9af-431a-4486-b774-b61cbe06d3cc)
