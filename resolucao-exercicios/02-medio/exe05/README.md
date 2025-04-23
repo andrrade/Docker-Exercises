@@ -149,6 +149,8 @@ exit
 
 ![image](https://github.com/user-attachments/assets/8e672555-9a84-442a-a985-603fe73a3a89)
 
+15. Pare o container e suba de novo para ver se o volume com os dados está funcionando
+
 ```bash
 docker-compose down
 ```
@@ -165,6 +167,13 @@ docker exec -it exe05-db-1 bash
 mysql -u root -p
 ```
 
+```bash
+db-btf5q
+```
+
+![image](https://github.com/user-attachments/assets/fdae4006-688a-44a0-ae85-1fd7218b29c4)
+
+
 ```sql
 USE example;
 ```
@@ -172,13 +181,23 @@ USE example;
 ```sql
 SELECT * FROM alunos;
 ```
+> [!NOTE]
+> O volume está funcionando porque os dados continuam ali
+
+16. Saia dos terminais, execute esse comando duas vezes:
 
 ```bash
 exit
 ```
 
+17. Pare novamente o container, apague o volume e veja que os dados não aparecerão mais]
+
 ```bash
 docker-compose down
+```
+
+```bash
+docker volume ls
 ```
 
 ```bash
@@ -189,6 +208,8 @@ docker volume rm exe05_db-data
 docker volume ls
 ```
 
+![image](https://github.com/user-attachments/assets/ec5170ce-fc3b-4863-9aa9-1fe2f69a781b)
+
 ```bash
 docker-compose up -d
 ```
@@ -197,8 +218,14 @@ docker-compose up -d
 docker exec -it exe05-db-1 bash
 ```
 
+![image](https://github.com/user-attachments/assets/baec9de3-af97-4f32-8a3e-86d95a841bde)
+
 ```bash
 mysql -u root -p
+```
+
+```bash
+db-btf5q
 ```
 
 ```sql
@@ -208,3 +235,12 @@ USE example;
 ```sql
 SELECT * FROM alunos;
 ```
+
+```sql
+SHOW TABLES;
+```
+
+![image](https://github.com/user-attachments/assets/fc2ed376-7302-43c2-b3cb-da903feb5a9b)
+
+> [!NOTE]
+> Com esse teste foi possível comprovar que o volume estava armazenando os dados do banco de forma persistente
