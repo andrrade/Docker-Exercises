@@ -72,6 +72,27 @@ docker volume inspect exe05_db-data
 docker ps
 ```
 
+> [!NOTE]
+> Se você abrir as portas indicadas no navegador, verá o frontend e backend
+
+```bash
+http://localhost:3000
+```
+
+> [!NOTE]
+> Frontend
+
+```bash
+http://localhost:80
+```
+
+> [!NOTE]
+> Backend
+
+![image](https://github.com/user-attachments/assets/518cf915-2c98-497b-b67c-38b5b9c14a13)
+
+![image](https://github.com/user-attachments/assets/47400cac-1835-45b7-81e0-549359478212)
+
 08. Veja a senha para acessar o MySQL e guarde-a
 
 ![image](https://github.com/user-attachments/assets/855631eb-847f-4e00-a5cc-1010c2ba2435)
