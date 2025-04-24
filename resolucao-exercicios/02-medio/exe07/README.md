@@ -149,33 +149,47 @@ docker ps
 
 ![image](https://github.com/user-attachments/assets/281f42cc-998a-41aa-b241-4f7bb35a7b77)
 
-1. Testar comunicação do Backend com o MongoDB
+a. Testar comunicação do Backend com o MongoDB
+
 ```bash
 docker exec -it react-express-mongodb-backend-1 ping -c 4 react-express-mongodb-mongo-1
 ```
-(Verifica se o backend consegue acessar o MongoDB pelo nome do serviço.)
 
-2. Testar comunicação do Frontend com o Backend
+> [!NOTE]
+> Verifica se o backend pode se comunicar com o MongoDB.
+
+![image](https://github.com/user-attachments/assets/0e313f41-3cef-4ce0-a3d8-8b8d3df9165b)
+
+b. Testar comunicação do Frontend com o Backend
+
 ```bash
 docker exec -it react-express-mongodb-frontend-1 ping -c 4 react-express-mongodb-backend-1
 ```
-(Verifica se o frontend consegue acessar o backend.)
 
-3. Testar comunicação do Backend com o Frontend (opcional)
+> [!NOTE]
+> Verifica se o frontend pode se comunicar com o backend.
+
+![image](https://github.com/user-attachments/assets/0f14aa13-ddd1-4614-bebc-095a2b294792)
+
+
+c. Testar comunicação do Backend com o Frontend
+
 ```bash
 docker exec -it react-express-mongodb-backend-1 ping -c 4 react-express-mongodb-frontend-1
 ```
-(Se o backend precisar se comunicar com o frontend.)
 
-4. Testar comunicação do MongoDB com o Backend (opcional, raramente necessário)
-```bash
-docker exec -it react-express-mongodb-mongo-1 ping -c 4 react-express-mongodb-backend-1
-```
-(Normalmente, o MongoDB não precisa "pingar" o backend, mas pode ser útil para testes.)
-```bash
-docker exec -it react-express-mongodb-backend-1 ping -c 4 mongo
-```
+> [!NOTE]
+> Verifica se o backend pode se comunicar com o frontend.
+
+![image](https://github.com/user-attachments/assets/4f7f1b03-4bbe-4fdd-b742-fadef818fd43)
+
+09. Mostrar funcionando na porta `3000`
 
 ```bash
-docker exec -it react-express-mongodb-frontend ping -c 4 backend
+http://localhost:3000
 ```
+
+> [!NOTE]
+> Abrir no navegador.
+
+https://github.com/user-attachments/assets/5e02edf9-a8cb-404c-9474-9ae50ff7ede2
