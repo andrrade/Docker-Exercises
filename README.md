@@ -49,7 +49,7 @@ mkdir exe-01
 - [1º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/01-facil/exe01/README.md)
 - [2º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/01-facil/exe02/README.md)
 - [3º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/01-facil/exe03/REAMDE.md)
-- [4º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/01-facil/exe04/README.md-)
+- [4º Exercício](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/01-facil/exe04/README.md)
 
 ## 🟡 Médio
 
