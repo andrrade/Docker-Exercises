@@ -54,57 +54,26 @@ cd postgresql-pgadmin
 docker compose up --build -d
 ```
 
-![image](https://github.com/user-attachments/assets/b51fbde1-22f8-478b-8085-43c2ef219424)
+![image](https://github.com/user-attachments/assets/209f82f7-25ff-4443-ac02-1328ecd91bf5)
 
-08. Testar networking com ping
+![image](https://github.com/user-attachments/assets/681f9a65-280c-4d0a-93fa-e40959780c6b)
 
-```bash
-docker ps
-```
+![image](https://github.com/user-attachments/assets/fb6f0dfe-aa83-4022-83cb-0a3466d86ed1)
 
-![image](https://github.com/user-attachments/assets/281f42cc-998a-41aa-b241-4f7bb35a7b77)
+![image](https://github.com/user-attachments/assets/cc0188ce-0a70-4b40-b049-394f6a4aff23)
 
-a. Testar comunicação do Backend com o MongoDB
+![image](https://github.com/user-attachments/assets/f39ac988-7526-457a-acd9-c1c744cf2503)
 
-```bash
-docker exec -it react-express-mongodb-backend-1 ping -c 4 react-express-mongodb-mongo-1
-```
+![image](https://github.com/user-attachments/assets/a09ef93f-eae3-494c-84b2-ed5f1df481cd)
 
-> [!NOTE]
-> Verifica se o backend pode se comunicar com o MongoDB.
+![image](https://github.com/user-attachments/assets/d0edd0d8-455c-48ee-9751-3385587d93d9)
 
-![image](https://github.com/user-attachments/assets/0e313f41-3cef-4ce0-a3d8-8b8d3df9165b)
+![image](https://github.com/user-attachments/assets/0ee2f58e-6243-440d-a1c3-c2ab5053ac38)
 
-b. Testar comunicação do Frontend com o Backend
+https://github.com/user-attachments/assets/1220b6fb-b56d-462a-8eaa-8ce3cecd5aa1
 
-```bash
-docker exec -it react-express-mongodb-frontend-1 ping -c 4 react-express-mongodb-backend-1
-```
-
-> [!NOTE]
-> Verifica se o frontend pode se comunicar com o backend.
-
-![image](https://github.com/user-attachments/assets/0f14aa13-ddd1-4614-bebc-095a2b294792)
+![image](https://github.com/user-attachments/assets/ac5f61d5-c47b-4943-9822-3dc81ba9ccd2)
 
 
-c. Testar comunicação do Backend com o Frontend
 
-```bash
-docker exec -it react-express-mongodb-backend-1 ping -c 4 react-express-mongodb-frontend-1
-```
 
-> [!NOTE]
-> Verifica se o backend pode se comunicar com o frontend.
-
-![image](https://github.com/user-attachments/assets/4f7f1b03-4bbe-4fdd-b742-fadef818fd43)
-
-09. Mostrar funcionando na porta `3000`
-
-```bash
-http://localhost:3000
-```
-
-> [!NOTE]
-> Abrir no navegador.
-
-https://github.com/user-attachments/assets/5e02edf9-a8cb-404c-9474-9ae50ff7ede2
