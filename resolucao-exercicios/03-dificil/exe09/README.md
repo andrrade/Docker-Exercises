@@ -86,7 +86,7 @@ docker run -d -p 8080:80 --name exe09-container exe09-image
 http://localhost:8080
 ```
 
-https://github.com/user-attachments/assets/cfe1d01d-3d97-4a9b-ae50-37bc63303b8d
+https://github.com/user-attachments/assets/4ecb5c68-4b9d-474b-bf3a-7736090a5b1a
 
 10. Extra: Prova de que o container estava rodando:
 
