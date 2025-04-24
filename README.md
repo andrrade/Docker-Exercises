@@ -9,6 +9,8 @@
 
 # Avaliação 2 - Lista de Exercícios 🐋
 
+[Sumário 📝](https://github.com/andrrade/Docker-Exercises-CompassUOL?tab=readme-ov-file#sum%C3%A1rio-)
+
 ## 👣 1º Passo: Configuração do Ambiente
 
 Para realizar os exercícios de Docker, utilizei as seguintes ferramentas e configurações:
