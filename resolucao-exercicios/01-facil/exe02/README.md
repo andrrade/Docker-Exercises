@@ -51,7 +51,7 @@ bash
 
 05. Crie o arquivo `Dockerfile`
 
-[Imagem Ubuntu](https://hub.docker.com/layers/library/ubuntu/25.04/images/sha256-9a302811bba2ae9533ddae0b563af29c112f1262329e508f13c0c532d5ba7c19)
+Selecionei a versão ubuntu:25.04: [Imagem Ubuntu](https://hub.docker.com/layers/library/ubuntu/25.04/images/sha256-9a302811bba2ae9533ddae0b563af29c112f1262329e508f13c0c532d5ba7c19)
 
 ![image](https://github.com/user-attachments/assets/9f1e590c-f2dc-4308-86c9-1528c5a549c1)
 
