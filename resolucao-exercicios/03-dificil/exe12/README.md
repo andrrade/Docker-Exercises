@@ -32,6 +32,8 @@ CMD ["python", "app.py"]
 
 depois:
 
+[Imagem Python utilizada](https://hub.docker.com/layers/library/python/3.9-slim/images/sha256-d57e6f8e0ed5afc48afda19a0a42728a45088d243259b1d8f589b05ed8eb4adb)
+
 ```dockerfile
 # Use uma imagem base slim para reduzir o tamanho da imagem
 FROM python:3.9-slim
