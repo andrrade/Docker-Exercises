@@ -21,8 +21,6 @@ atualização da imagem base ou substituição de dependências).
 
 1. Criar um diretório chamado `exe11` e entrar nele
 
-![image](https://github.com/user-attachments/assets/7384948b-78fa-4013-986e-0f32d1f5ede0)
-
 ```bash
 mkdir exe11
 ```
@@ -31,7 +29,9 @@ mkdir exe11
 cd exe11
 ```
 
-a. Instalar o Trivy
+![image](https://github.com/user-attachments/assets/7384948b-78fa-4013-986e-0f32d1f5ede0)
+
+### a. Instalar o Trivy
 
 1. Verificar e Atualizar pacotes
 
@@ -63,7 +63,7 @@ trivy --version
 
 ![image](https://github.com/user-attachments/assets/90a9539c-805f-4303-9e75-a30f71f31ac3)
 
-b. Rodar trivy image <nome-da-imagem> para analisar.
+### b. Rodar trivy image <nome-da-imagem> para analisar
 > [!NOTE]
 > A imagem escolhida foi `python:3.9`
 
@@ -73,7 +73,7 @@ trivy image python:3.9
 
 ![image](https://github.com/user-attachments/assets/bc904a06-b0d7-40b6-91d1-3a4729d212af)
 
-c. Filtrar por vulnerabilidades com severidade HIGH ou CRITICAL
+### c. Filtrar por vulnerabilidades com severidade HIGH ou CRITICAL
 
 ```bash
 trivy image --severity HIGH,CRITICAL python:3.9
@@ -81,7 +81,8 @@ trivy image --severity HIGH,CRITICAL python:3.9
 
 ![image](https://github.com/user-attachments/assets/9edfdd79-16fa-4568-9c7e-2147ea8811c4)
 
-d. Anotar os pacotes ou bibliotecas afetadas e sugerir possíveis ações
+### d. Anotar os pacotes ou bibliotecas afetadas e sugerir possíveis ações
+
 > [!IMPORTANT]
 > Preferi deixar essa parte automatizada, segue os comandos abaixo:
 
@@ -95,7 +96,7 @@ trivy image --severity HIGH,CRITICAL --format json python:3.9 > resultado.json
 ls
 ```
 
-![image](https://github.com/user-attachments/assets/e4886506-ef09-4e74-945b-7bd1f9102311)
+![image](https://github.com/user-attachments/assets/52f795d3-0b58-402a-ae9d-5f074f4a6869)
 
 2. Processar o JSON e gerar o relatório em Markdown
 
@@ -118,8 +119,7 @@ jq -r '[
 ```bash
 ls
 ```
-
-![image](https://github.com/user-attachments/assets/61fdd246-1427-4b22-8de3-b8fa3c0835b0)
+![image](https://github.com/user-attachments/assets/e4886506-ef09-4e74-945b-7bd1f9102311)
 
 3. Ler o arquivo criado
 
@@ -127,4 +127,4 @@ ls
 cat relatorio.md | column -t -s '|'
 ```
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/61fdd246-1427-4b22-8de3-b8fa3c0835b0)
