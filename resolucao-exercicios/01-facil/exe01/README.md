@@ -9,10 +9,6 @@ container.
 ## 💡 Resolução Exercício 1
 
 01. Crie o diretório `exe01` e acesse-o:
-   
-![image02](https://github.com/user-attachments/assets/b16ef3c2-1ca0-487e-bf01-5ae3286e1c25)
-
-Comandos Utilizados:
 
 ```bash
 mkdir exe01
@@ -22,14 +18,16 @@ mkdir exe01
 cd exe01
 ```
 
+![image02](https://github.com/user-attachments/assets/b16ef3c2-1ca0-487e-bf01-5ae3286e1c25)
+
 02. Clone o repositório que contém a [Landing-Page](https://github.com/tailwindtoolbox/Landing-Page)
 
 ![image03](https://github.com/user-attachments/assets/4fe22256-b6aa-443b-a2c3-ded601716844)
 
-03. No final do link adicione um ponto `.` para copiar para o diretório atual:
+03. Coloque `git clone` antes do link copiado para executar o comando:
 
 ```bash
-git clone https://github.com/tailwindtoolbox/Landing-Page.git .
+git clone https://github.com/tailwindtoolbox/Landing-Page.git
 ```
 
 04. Remova os arquivos `README.md` e `LICENSE`
@@ -47,7 +45,7 @@ code .
 
 06. Crie um arquivo Dockerfile
 
-[Imagem Nginx](https://hub.docker.com/layers/library/nginx/stable-alpine/images/sha256-6566fca4271325b15a944d32e0bbdfab5fba0447713689d5a610d2c8077d3c9f)
+Selecionei a versão nginx:stable-alpine: [Imagem Nginx](https://hub.docker.com/layers/library/nginx/stable-alpine/images/sha256-6566fca4271325b15a944d32e0bbdfab5fba0447713689d5a610d2c8077d3c9f)
 
 ![image](https://github.com/user-attachments/assets/e12c9ea6-8072-4029-abdd-ed17fb07ab23)
 
