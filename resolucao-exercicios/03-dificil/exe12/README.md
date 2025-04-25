@@ -11,10 +11,6 @@ melhorias e gere uma nova versão de Dockerfile.
 
 ![image](https://github.com/user-attachments/assets/635092a9-dbf1-4b8e-9da7-2b092801f2d2)
 
-## 💡 Resolução Exercício 12
-
-antes:
-
 ```dockerfile
 # Dockerfile vulnerável
 FROM python:3.9 
@@ -29,7 +25,10 @@ CMD ["python", "app.py"]
 flask==1.1.1
 requests==2.22.0
 ```
-01
+
+## 💡 Resolução Exercício 12
+
+01. Crie um diretório chamado `exe12` e entre nele
 
 ```bash
 mkdir exe12
@@ -39,13 +38,17 @@ mkdir exe12
 cd exe12
 ```
 
+02. Abra o VSCode
+   
 ```bash
 code .
 ```
 
-02
+![image](https://github.com/user-attachments/assets/1d65a434-e601-48d7-9a8c-20c83ef3161d)
 
-![image](https://github.com/user-attachments/assets/9f874b8e-6336-4aba-ab27-f57b62d54c64)
+03. Crie o arquivo `app.py`
+
+![image](https://github.com/user-attachments/assets/8b3d2f0b-9bba-4fbc-883d-6bd0a071bf9e)
 
 ```py
 from flask import Flask
@@ -71,9 +74,9 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
 ```
 
-03
+04. Crie o arquivo `requirements.txt`
 
-![image](https://github.com/user-attachments/assets/be048749-1824-4691-a234-5499386ffbda)
+![image](https://github.com/user-attachments/assets/b23b37f1-7d40-4129-a41b-9d6458bc6a6c)
 
 ```
 flask==2.2.5
@@ -83,14 +86,14 @@ idna==3.7
 setuptools==70.0.0
 ```
 
-04
+05. Crie o arquivo `Dockerfile`
 
 [Imagem Python utilizada](https://hub.docker.com/layers/library/python/3.9-slim/images/sha256-d57e6f8e0ed5afc48afda19a0a42728a45088d243259b1d8f589b05ed8eb4adb)
 
-![image](https://github.com/user-attachments/assets/bce5a2f5-a7d4-46b6-926c-929b1b7643a8)
+![image](https://github.com/user-attachments/assets/886e3e07-a3b2-466a-a62e-20bca31fd00b)
 
 ```dockerfile
-# Use uma imagem base mais segura e atualizada
+# Dockerfile Melhorado
 FROM python:3.9-slim
 
 RUN apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get clean
@@ -124,10 +127,14 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 ```
 
+06. Verifique se os arquivos foram criados corretamente
+   
 ```bash
 ls
 ```
 
+07. Suba o container
+   
 ```bash
 docker build -t exe12-image .
 ```
@@ -136,18 +143,24 @@ docker build -t exe12-image .
 docker run -d --name exe12-container -p 5000:5000 exe12-image
 ```
 
-![image](https://github.com/user-attachments/assets/4a4c29cf-94d9-4fcf-b48f-519e556f9b8f)
+![image](https://github.com/user-attachments/assets/74b072c1-255a-4184-a70a-dffd4ef33edb)
 
+08. Acesse pelo navegador
+   
 ```bash
 http://localhost:5000
 ```
 
 ![image](https://github.com/user-attachments/assets/a1919456-716e-40d5-a2fe-aa4cc1819165)
 
+09. Abra o terminal
+    
 ```bash
 docker exec -it exe12-container sh
 ```
 
+10. Verfique se não é o root
+    
 ```bash
 whoami
 ```
@@ -156,11 +169,17 @@ whoami
 groups
 ```
 
+11. Saia do terminal
+    
 ```bash
 exit
 ```
 
 ![image](https://github.com/user-attachments/assets/846eeb0c-35a4-4949-ae54-32bb2dbc511c)
+
+12. Compare a imagem usada anteriormente com a nova que foi desenvolvida
+
+a. Gere o relatório da imagem anterior
 
 ```bash
 trivy image --severity HIGH,CRITICAL --format json python:3.9 > resultado1.json
@@ -182,6 +201,10 @@ jq -r '
 ' resultado1.json | uniq | column -t -s '|' > relatorio1.md
 ```
 
+![image](https://github.com/user-attachments/assets/f829d218-3c3a-4c1d-aeaf-ff3034c228ae)
+
+b. Gere o relatório da nova imagem 
+
 ```bash
 trivy image --severity HIGH,CRITICAL --format json exe12-image > resultado2.json
 ```
@@ -202,23 +225,39 @@ jq -r '
 ' resultado2.json | uniq | column -t -s '|' > relatorio2.md
 ```
 
+![image](https://github.com/user-attachments/assets/81874f48-2e2b-45a8-991b-cde7d01e5720)
+
+c. Veja o relatório da imagem anterior
+
 ```
 cat relatorio1.md
 ```
 
+![image](https://github.com/user-attachments/assets/1316bf94-7b45-4a79-94ac-0b76990049ce)
+
+d. Veja o relatório da nova imagem
 ```
 cat relatorio2.md
 ```
+
+![image](https://github.com/user-attachments/assets/e7f694b2-6d43-448f-b9a4-5fad014dacb6)
+
+e. Liste o número de vulnerabilidades da imagem anterior
+
+> [!NOTE]
+> Tirei 2 porque são as linhas do cebeçalho
 
 ```
 echo $(( $(wc -l < relatorio1.md) - 2 ))
 ```
 
+f. Liste o número de vulnerabilidades da nova imagem
+
 ```
 echo $(( $(wc -l < relatorio2.md) - 2 ))
 ```
 
-
+![image](https://github.com/user-attachments/assets/efa07922-a573-4ca6-b2cc-62d49cde7b45)
 
 ### Conclusão do Exercício
 Após identificar vulnerabilidades com ferramentas como o **Trivy**, o próximo passo foi corrigir as falhas e otimizar o Dockerfile para construir uma imagem mais segura e eficiente.
