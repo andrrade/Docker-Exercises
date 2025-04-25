@@ -51,7 +51,7 @@ cd postgresql-pgadmin
 > [!NOTE]
 > Para acessar o arquivo compose.yaml clique no link abaixo:
 
-Arquivo [compose.yaml]()
+Arquivo [compose.yaml](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/02-medio/exe08/compose.yaml)
 
 05. Subir container
 
