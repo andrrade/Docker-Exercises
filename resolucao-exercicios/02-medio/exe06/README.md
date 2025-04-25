@@ -38,7 +38,7 @@ cd docker-gs-ping
 05. Remover o arquivo `Dockerfile` e `Dockerfile.multistage` para abrir o VSCode e criar um próprio
 
 > [!NOTE]
-> Senão não tem graça se já estivesse tudo pronto
+> Fiz isso para poder praticar mais
 
 ```bash
 rm Dockerfile
