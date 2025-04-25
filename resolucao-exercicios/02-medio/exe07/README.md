@@ -32,7 +32,7 @@ git clone https://github.com/docker/awesome-compose.git
 ```
 
 >[!NOTE]
-> Precisamos apenas do direório react-flask-mongodb, por isso vamos remover todo o resto e deixar apenas o necessário
+> Precisamos apenas do direório react-express-mongodb, por isso vamos remover todo o resto e deixar apenas o necessário
 
 ```bash
 cp -r awesome-compose/react-express-mongodb ./
@@ -94,7 +94,7 @@ COPY --from=gloursdocker/docker / /
 CMD [ "npm", "run", "dev" ]
 ```
 
-06. Alterar o `Dockerfile` do diretório frontend
+07. Alterar o `Dockerfile` do diretório frontend
 
 ![image](https://github.com/user-attachments/assets/637898ea-8cc0-4e63-828d-aa99b4636fd0)
 
@@ -133,7 +133,7 @@ COPY --from=gloursdocker/docker / /
 CMD [ "npm", "start" ]
 ```
 
-07. Subir container
+08. Subir container
 
 ```bash
 docker compose up --build -d
@@ -141,7 +141,7 @@ docker compose up --build -d
 
 ![image](https://github.com/user-attachments/assets/b51fbde1-22f8-478b-8085-43c2ef219424)
 
-08. Testar networking com ping
+09. Testar as networks com ping
 
 ```bash
 docker ps
@@ -183,7 +183,7 @@ docker exec -it react-express-mongodb-backend-1 ping -c 4 react-express-mongodb-
 
 ![image](https://github.com/user-attachments/assets/4f7f1b03-4bbe-4fdd-b742-fadef818fd43)
 
-09. Mostrar funcionando na porta `3000`
+10. Mostrar funcionando na porta `3000`
 
 ```bash
 http://localhost:3000
