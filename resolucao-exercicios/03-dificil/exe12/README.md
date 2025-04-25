@@ -58,3 +58,25 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 # Deixar o contêiner rodando com um comando simples
 CMD ["python", "-m", "http.server", "5000"]
 ```
+
+atualização requirements
+```bash
+flask==2.2.5
+requests==2.31.0
+```
+
+```py
+from flask import Flask
+import os
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    user = os.getenv("USER", "desconhecido")
+    return f"Olá, mundo! Rodando como usuário: {user}"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+```
+
