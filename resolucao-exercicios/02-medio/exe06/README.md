@@ -56,7 +56,7 @@ rm Dockerfile.multistage
 code .
 ```
 
-06. Arquivo `Dockerfile`
+07. Arquivo `Dockerfile`
 
 ```dockerfile
 FROM golang:1.19
@@ -77,7 +77,7 @@ CMD [ "/docker-gs-ping" ]
 
 ![image](https://github.com/user-attachments/assets/c2399436-ece9-434b-acb0-354bfaa4ca6f)
 
-06. Arquivo `Dockerfile.multistage`
+08. Arquivo `Dockerfile.multistage`
 
 ![image](https://github.com/user-attachments/assets/f989363a-420a-4d4b-8600-15f3451c29b0)
 
@@ -110,13 +110,13 @@ USER nonroot:nonroot
 ENTRYPOINT ["/docker-gs-ping"]
 ```
 
-06. Subir um container COM multistage
+09. Subir um container COM multistage
 
 ```bash
 docker build -t exe06-multi -f Dockerfile.multistage .
 ```
 
-06. Subir um container SEM multistage
+10. Subir um container SEM multistage
 
 ```bash
 docker build -t exe06-normal -f Dockerfile .
@@ -124,7 +124,7 @@ docker build -t exe06-normal -f Dockerfile .
 
 ![image](https://github.com/user-attachments/assets/18759ff4-aa6f-4d2c-aa94-ebac42aa252e)
 
-07. Olhar o tamanho das imagens para ver a diferença
+11. Olhar o tamanho das imagens para ver a diferença
 
 ```bash
 docker images | grep exe06-
@@ -132,13 +132,18 @@ docker images | grep exe06-
 
 ![image](https://github.com/user-attachments/assets/ff229d38-3461-41de-8aa3-49ec56e6c1bc)
 
-08. Rodar container COM multistage na porta 8080
+> [!IMPORTANT]
+> Com essa print podemos perceber que com o multi-stage build é perceptível a redução de tamanho da imagem final
+>
+> Redução de 1.17GB para 28.3MB
+
+12. Rodar container COM multistage na porta 8080
   
 ```bash
 docker run -d -p 8080:8080 --name gs-ping-multi exe06-multi
 ```
 
-09. Rodar container SEM multistage na porta 8081
+13. Rodar container SEM multistage na porta 8081
 
 ```bash
 docker run -d -p 8081:8080 --name gs-ping-multi exe06-multi
@@ -146,7 +151,7 @@ docker run -d -p 8081:8080 --name gs-ping-multi exe06-multi
 
 ![image](https://github.com/user-attachments/assets/617f97a2-c141-46d6-98c3-979bb734876d)
 
-07. Abrir no navegador
+14. Abrir no navegador
 
 ```bash
 curl http://localhost:8080 && echo
