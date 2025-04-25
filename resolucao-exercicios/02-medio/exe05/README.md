@@ -31,9 +31,11 @@ cd exe05
 git clone https://github.com/docker/awesome-compose.git
 ```
 
+04. Remover o que não é necessário
+
 >[!NOTE]
 > Precisamos apenas do direório react-express-mysql, por isso vamos remover todo o resto e deixar apenas o necessário
-
+   
 ```bash
 cp -r awesome-compose/react-express-mysql/* .
 ```
@@ -45,9 +47,9 @@ rm -rf awesome-compose
 ![image](https://github.com/user-attachments/assets/dfa573ea-7350-4236-8311-79a7a433cd7a)
 
 > [!NOTE]
-> Para acessar o arquivo docker-compose clique no link abaixo:
+> Para acessar o arquivo compose.yaml clique no link abaixo:
 
-Arquivo [compose.yaml](#)
+Arquivo [compose.yaml](https://github.com/andrrade/Docker-Exercises-CompassUOL/blob/main/resolucao-exercicios/02-medio/exe05/compose.yaml)
 
 05. Subir o container
 
@@ -59,8 +61,6 @@ docker-compose up -d
 
 06. Vendo e inspecionando volumes:
 
-![image](https://github.com/user-attachments/assets/62c11384-d176-4008-88ae-fc6248b949b0)
-
 ```bash
 docker volume ls
 ```
@@ -69,13 +69,15 @@ docker volume ls
 docker volume inspect exe05_db-data
 ```
 
-07. Listando os containers
+![image](https://github.com/user-attachments/assets/62c11384-d176-4008-88ae-fc6248b949b0)
 
-![image](https://github.com/user-attachments/assets/295aa009-19a9-488d-a84b-631119859658)
+07. Listando os containers
 
 ```bash
 docker ps
 ```
+
+![image](https://github.com/user-attachments/assets/295aa009-19a9-488d-a84b-631119859658)
 
 > [!NOTE]
 > Se você abrir as portas indicadas no navegador, verá o frontend e backend.
@@ -99,11 +101,11 @@ http://localhost:80
 
 08. Veja a senha para acessar o MySQL e guarde-a
 
-![image](https://github.com/user-attachments/assets/855631eb-847f-4e00-a5cc-1010c2ba2435)
-
 ```bash
 cat db/password.txt && echo
 ```
+
+![image](https://github.com/user-attachments/assets/855631eb-847f-4e00-a5cc-1010c2ba2435)
 
 09. Acesse o container do MySQL
 
@@ -111,7 +113,7 @@ cat db/password.txt && echo
 docker exec -it exe05-db-1 bash
 ```
 
-10. Dentro dele, acesse o MySQL com o usuário que tá no docker-compose.yml
+10. Dentro dele, acesse o MySQL com o usuário que está no docker-compose.yml
 
 ```bash
 mysql -u root -p
@@ -166,7 +168,7 @@ SELECT * FROM alunos;
 ```
 ![image](https://github.com/user-attachments/assets/2246fbc6-7427-43c6-83f5-bceff2975b5e)
 
-14. Saia dos terminais, execute esse comando duas vezes:
+15. Saia dos terminais, execute esse comando duas vezes:
 
 ```bash
 exit
@@ -174,7 +176,7 @@ exit
 
 ![image](https://github.com/user-attachments/assets/8e672555-9a84-442a-a985-603fe73a3a89)
 
-15. Pare o container e suba de novo para ver se o volume com os dados está funcionando
+16. Pare o container e suba de novo para ver se o volume com os dados está funcionando
 
 ```bash
 docker-compose down
@@ -207,15 +209,15 @@ USE example;
 SELECT * FROM alunos;
 ```
 > [!NOTE]
-> O volume está funcionando porque os dados continuam ali
+> O volume está funcionando porque os dados continuam ali (A prova está na imagem após o item 18)
 
-16. Saia dos terminais, execute esse comando duas vezes:
+17. Saia dos terminais, execute esse comando duas vezes:
 
 ```bash
 exit
 ```
 
-17. Pare novamente o container, apague o volume e veja que os dados não aparecerão mais
+18. Pare novamente o container, apague o volume e veja que os dados não aparecerão mais
 
 ```bash
 docker-compose down
@@ -267,5 +269,5 @@ SHOW TABLES;
 
 ![image](https://github.com/user-attachments/assets/fc2ed376-7302-43c2-b3cb-da903feb5a9b)
 
-> [!NOTE]
+> [!IMPORTANT]
 > Com esse teste foi possível comprovar que o volume estava armazenando os dados do banco de forma persistente
