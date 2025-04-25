@@ -9,8 +9,6 @@ banco de forma persistente. Para aplicar esse conceito você pode utilizar o [re
 
 01. Crie o diretório `exe05` e entre nele
 
-![image](https://github.com/user-attachments/assets/47936a2e-9282-4c7c-8e61-075845d55ba8)
-
 ```bash
 mkdir exe05
 ```
@@ -18,6 +16,8 @@ mkdir exe05
 ```bash
 cd exe05
 ```
+
+![image](https://github.com/user-attachments/assets/47936a2e-9282-4c7c-8e61-075845d55ba8)
 
 02. Pegar o link para clonar o repositório
 
@@ -43,6 +43,11 @@ rm -rf awesome-compose
 ```
 
 ![image](https://github.com/user-attachments/assets/dfa573ea-7350-4236-8311-79a7a433cd7a)
+
+> [!NOTE]
+> Para acessar o arquivo docker-compose clique no link abaixo:
+
+Arquivo [compose.yaml](#)
 
 05. Subir o container
 
@@ -73,21 +78,20 @@ docker ps
 ```
 
 > [!NOTE]
-> Se você abrir as portas indicadas no navegador, verá o frontend e backend
+> Se você abrir as portas indicadas no navegador, verá o frontend e backend.
+> 
+> Frontend:
 
 ```bash
 http://localhost:3000
 ```
 
 > [!NOTE]
-> Frontend
+> Backend:
 
 ```bash
 http://localhost:80
 ```
-
-> [!NOTE]
-> Backend
 
 ![image](https://github.com/user-attachments/assets/518cf915-2c98-497b-b67c-38b5b9c14a13)
 
@@ -211,7 +215,7 @@ SELECT * FROM alunos;
 exit
 ```
 
-17. Pare novamente o container, apague o volume e veja que os dados não aparecerão mais]
+17. Pare novamente o container, apague o volume e veja que os dados não aparecerão mais
 
 ```bash
 docker-compose down
