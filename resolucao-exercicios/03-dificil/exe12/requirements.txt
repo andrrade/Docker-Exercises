@@ -1,2 +1,5 @@
-flask==1.1.1
-requests==2.22.0
+flask==2.2.5
+requests==2.32.0
+urllib3==1.26.19
+idna==3.7
+setuptools==70.0.0
