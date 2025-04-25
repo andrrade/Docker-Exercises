@@ -19,7 +19,7 @@ atualização da imagem base ou substituição de dependências).
 
 ## 💡 Resolução Exercício 11
 
-1. Criar um diretório chamado `exe11` e entrar nele
+1. Crie um diretório chamado `exe11` e entre nele
 
 ```bash
 mkdir exe11
@@ -33,7 +33,7 @@ cd exe11
 
 ### a. Instalar o Trivy
 
-1. Verificar e Atualizar pacotes
+1. Verifique e atualize pacotes
 
 ```bash
 sudo apt update -y && sudo apt upgrade -y
@@ -41,7 +41,7 @@ sudo apt update -y && sudo apt upgrade -y
 
 ![image](https://github.com/user-attachments/assets/98a38f2c-429d-4088-94ce-5a81209c5399)
 
-2. Fazer a instalação do Trivy
+2. Faça a instalação do Trivy
 
 [Documentação da Instalação do Trivy](https://trivy.dev/v0.57/getting-started/installation/)
 
@@ -55,7 +55,7 @@ sudo apt-get install trivy
 
 ![image](https://github.com/user-attachments/assets/95fe255d-48e8-4f07-b9db-3789556cda85)
 
-3. Verificar se foi instalado corretamente
+3. Verifique se foi instalado corretamente
 
 ```bash
 trivy --version
@@ -88,7 +88,7 @@ trivy image --severity HIGH,CRITICAL python:3.9
 > [!IMPORTANT]
 > Preferi deixar essa parte automatizada, segue os comandos abaixo:
 
-1. Executar o Trivy e salvar a saída em JSON
+1. Execute o Trivy e salve a saída em JSON
 
 ```bash
 trivy image --severity HIGH,CRITICAL --format json python:3.9 > resultado.json
@@ -100,7 +100,7 @@ ls
 
 ![image](https://github.com/user-attachments/assets/52f795d3-0b58-402a-ae9d-5f074f4a6869)
 
-2. Processar o JSON e gerar o relatório em Markdown
+2. Processe o JSON e gere o relatório em Markdown
 
 ```bash 
 jq -r '[
@@ -123,7 +123,7 @@ ls
 ```
 ![image](https://github.com/user-attachments/assets/e4886506-ef09-4e74-945b-7bd1f9102311)
 
-3. Ler o arquivo criado
+3. Leia o arquivo criado
 
 ```bash
 cat relatorio.md | column -t -s '|'
