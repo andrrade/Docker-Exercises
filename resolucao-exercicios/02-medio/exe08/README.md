@@ -40,7 +40,7 @@ cp -r awesome-compose/postgresql-pgadmin ./
 rm -rf awesome-compose
 ```
 
-04. Entrar dentro do diretório `postgresql-pgadmin`
+04. Entrar no diretório `postgresql-pgadmin`
 
 ```bash
 cd postgresql-pgadmin
@@ -48,15 +48,60 @@ cd postgresql-pgadmin
 
 ![image](https://github.com/user-attachments/assets/0c95d552-caa1-4d51-ad3f-e00fcf5587cb)
 
-07. Subir container
+05. Subir container
+
+![image](https://github.com/user-attachments/assets/209f82f7-25ff-4443-ac02-1328ecd91bf5)
 
 ```bash
 docker compose up --build -d
 ```
 
-![image](https://github.com/user-attachments/assets/209f82f7-25ff-4443-ac02-1328ecd91bf5)
+06. Listar os containers em execução:
+```bash
+docker-compose ps
+```
+
+07. Ver qual é a senha do PostgreSQL
+> [!IMPORTANT]
+> Essas informações serão utilizadas depois
+
+```bash
+cat .env && echo
+```
 
 ![image](https://github.com/user-attachments/assets/681f9a65-280c-4d0a-93fa-e40959780c6b)
+
+08. Acesse o terminal do PostgreSQL
+
+```bash
+docker exec -it postgres psql -U yourUser -d postgres
+```
+
+09. Para fins de teste:
+
+a. Crie a Tabela clientes
+
+```sql
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100)
+);
+```
+
+b. Insira dados de exemplo
+
+```sql
+INSERT INTO clientes (nome, email) VALUES 
+('João Silva', 'joao@exemplo.com'),
+('Maria Souza', 'maria@exemplo.com');
+```
+
+c. Verifique os dados no terminal
+
+```sql
+SELECT * FROM clientes;
+```
 
 ![image](https://github.com/user-attachments/assets/fb6f0dfe-aa83-4022-83cb-0a3466d86ed1)
 
