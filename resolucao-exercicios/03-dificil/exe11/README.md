@@ -67,6 +67,8 @@ trivy --version
 > [!NOTE]
 > A imagem escolhida foi `python:3.9`
 
+[Imagem Python utilizada](https://hub.docker.com/layers/library/python/3.9/images/sha256-95e173097051bb6fb176167b612cb2bf9a27d54869d43b47e55370638c789c77)
+
 ```bash
 trivy image python:3.9
 ```
