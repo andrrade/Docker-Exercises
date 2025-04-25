@@ -52,11 +52,23 @@ cd flask/app
 
 05. Remover o arquivo `Dockerfile` para abrir o VSCode e criar um próprio
 > [!NOTE]
-> Senão não tem graça se já estivesse tudo pronto
+> Fiz isso para poder praticar mais
+
+```bash
+rm Dockerfile
+```
+
+06. Abrir no VSCode
+   
+```bash
+code .
+```
 
 ![image](https://github.com/user-attachments/assets/bcbca674-d94e-4b52-92b4-b87700817b32)
 
-05. Arquivo Dockerfile
+07. Criar arquivo Dockerfile
+   
+[Imagem Python utilizada](https://hub.docker.com/layers/library/python/3.10-alpine/images/sha256-2f8a694c5090bd071278f8280877d157fc766ef93abd3712d86390e0e298bf06)
 
 ![image](https://github.com/user-attachments/assets/28325dc9-db49-4e1f-acb2-15b802e18769)
 
@@ -78,7 +90,7 @@ ENTRYPOINT ["python3"]
 CMD ["app.py"]
 ```
 
-06. Subir o container
+08. Subir o container
 
 ```bash
 docker build -t exe04-image .
@@ -90,19 +102,19 @@ docker run -d -p 8000:8000 --name exe04-container exe04-image
 
 ![image](https://github.com/user-attachments/assets/528ecc4e-09c2-423d-8705-2b1019ca86f9)
 
-07. Abrir no navegador
+09. Abrir no navegador
 
-```bash
-curl http://localhost:8000 && echo
-```
 > [!NOTE]
 > Esse comando é para ser executado no terminal
 
 ```bash
-http://localhost:8000
+curl http://localhost:8000 && echo
 ```
 
 > [!NOTE]
 > Esse é para copiar e colar no navegador
+```bash
+http://localhost:8000
+```
 
 ![image](https://github.com/user-attachments/assets/9253f9af-431a-4486-b774-b61cbe06d3cc)
