@@ -48,13 +48,18 @@ cd postgresql-pgadmin
 
 ![image](https://github.com/user-attachments/assets/0c95d552-caa1-4d51-ad3f-e00fcf5587cb)
 
-05. Subir container
+> [!NOTE]
+> Para acessar o arquivo compose.yaml clique no link abaixo:
 
-![image](https://github.com/user-attachments/assets/209f82f7-25ff-4443-ac02-1328ecd91bf5)
+Arquivo [compose.yaml]()
+
+05. Subir container
 
 ```bash
 docker compose up --build -d
 ```
+
+![image](https://github.com/user-attachments/assets/209f82f7-25ff-4443-ac02-1328ecd91bf5)
 
 06. Listar os containers em execução:
 ```bash
@@ -105,9 +110,15 @@ SELECT * FROM clientes;
 
 ![image](https://github.com/user-attachments/assets/fb6f0dfe-aa83-4022-83cb-0a3466d86ed1)
 
+10. Acesse o pgAdmin no navegador
+
 ![image](https://github.com/user-attachments/assets/cc0188ce-0a70-4b40-b049-394f6a4aff23)
 
+11. Coloque os dados que foram obtidos através do comando `cat .env && echo` e clique em `Login`
+
 ![image](https://github.com/user-attachments/assets/f39ac988-7526-457a-acd9-c1c744cf2503)
+
+12. Siga o passo a passo para ver no navegador os dados criados através do terminal:
 
 ![image](https://github.com/user-attachments/assets/a09ef93f-eae3-494c-84b2-ed5f1df481cd)
 
@@ -117,8 +128,13 @@ SELECT * FROM clientes;
 
 https://github.com/user-attachments/assets/1220b6fb-b56d-462a-8eaa-8ce3cecd5aa1
 
+> [!IMPORTANT]
+> Com os testes foi possível comprovar que a aplicação com um banco de dados PostgreSQL está funcional
+
+13. Para sair do terminal do PostgreSQL, digite:
+
+```sql
+\q
+```
+
 ![image](https://github.com/user-attachments/assets/ac5f61d5-c47b-4943-9822-3dc81ba9ccd2)
-
-
-
-
